@@ -1,4 +1,4 @@
 # Dofus-Wiki
-Repositório com códigos em Wikitext para predefinições na Dofus Wiki em português.
+Repositório com predefinições em Wikitext para a Dofus Wiki em português.
 
-Repository with Wikitext codes for portuguese Dofus Wiki templates.
+Repository with Wikitext templates for portuguese Dofus Wiki.
