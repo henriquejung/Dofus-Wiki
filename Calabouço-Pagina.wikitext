@@ -1,0 +1,261 @@
+<%-- [PAGE_INFO]
+    comment = #Please do not remove this struct. It's record contains some important information of edit. This struct will be removed automatically after you push edits.#
+    pageTitle = #Predefinição:Calabouço#
+    pageID = #15432#
+    revisionID = #48188#
+    contentModel = #wikitext#
+    contentFormat = #text/x-wiki#
+[END_PAGE_INFO] --%>
+
+<noinclude>
+	<templatedata>
+		{
+		    "description": "Predefinição para a criação de uma página de calabouço.",
+		    "params": {
+		        "nivel": {
+		            "label": "Nível recomendado",
+		            "description": "O nível recomendado para realizar o calabouço",
+		            "type": "string",
+		            "required": true
+		        },
+		        "area": {
+		            "label": "Área",
+		            "description": "A área onde o calabouço se encontra",
+		            "type": "string",
+		            "required": true
+		        },
+		        "subarea": {
+		            "label": "Subárea",
+		            "description": "A subárea onde o calabouço se encontra",
+		            "type": "string",
+		            "required": true
+		        },
+		        "coords": {
+		            "label": "Coordenadas",
+		            "description": "As coordenadas da entrada do calabouço",
+		            "type": "string",
+		            "required": true
+		        },
+		        "chave": {
+		            "label": "Chave",
+		            "description": "Chave necessária para a entrada no calabouço",
+		            "type": "string",
+		            "required": true
+		        },
+		        "molho": {
+		            "label": "Aceita Molho de Chaves",
+		            "description": "Se o calabouço aceita o Molho de Chaves como entrada",
+		            "type": "string",
+		            "required": true,
+					"suggestedvalues": ["Aceita", "Não aceita"]
+		        },
+				"monstros": {
+		            "label": "Monstros exclusivos",
+		            "description": "Lista de monstros presentes apenas neste calabouço",
+		            "type": "string",
+		            "required": true
+		        },
+		        "recompensas": {
+		            "label": "Recompensas",
+		            "description": "Itens adicionais recebidos ao finalizar o calabouço",
+		            "type": "string",
+		            "required": false,
+					"default": "Nenhuma"
+		        },
+		        "detalhes": {
+		            "label": "Detalhes",
+		            "description": "Informações adicionais sobre o calabouço",
+		            "type": "string",
+		            "required": false,
+					"default": ""
+		        },
+		        "npc_entrada": {
+		            "label": "NPC",
+		            "description": "Nome do NPC que permite a entrada no calabouço",
+		            "type": "string",
+		            "required": false,
+					"example": "Rotabla, o pastor"
+		        },
+				"localizao_secao": {
+		            "label": "Seção Localização",
+		            "description": "Texto destinado à seção Localização, a qual informa o local do calabouço. Cria a seção no corpo da página",
+		            "type": "string",
+		            "required": false,
+					"default": "{{{PAGENAME}}} está localizado em {{{coords}}} em {{{subarea}}}.",
+					"example": "Pátio do Papatudo Real está localizado em [2,-34] em Tainela."
+		        },
+				"acesso_secao": {
+		            "label": "Seção Acesso",
+		            "description": "Texto destinado à seção Acesso, a qual informa como entrar no calabouço. Cria a seção no corpo da página",
+		            "type": "string",
+		            "required": false,
+					"default": "A entrada no calabouço requer que uma {{{chave}}} seja entregue para NPC, a qual será consumida.",
+					"example": "A entrada no calabouço requer que uma Chave do Pátio do Papatudo Real seja entregue para Rotabla, o pastor, a qual será consumida."
+		        },
+				"missoes_secao": {
+		            "label": "Seção Missões Relacionadas",
+		            "description": "Texto destinado à seção Missões Relacionadas, a qual lista as missões relacionadas com o calabouço. Cria a seção no corpo da página",
+		            "type": "string",
+		            "required": false,
+					"example": "- Cortar Paparneirinhos - Requer ter completado o calabouço Pátio do Papatudo Real."
+		        },
+				"salas_secao": {
+		            "label": "Seção Salas",
+		            "description": "Texto destinado à seção Salas. Cria a seção no corpo da página",
+		            "type": "string",
+		            "required": false
+		        },
+				"recompensas_secao": {
+		            "label": "Seção Recompensas",
+		            "description": "Texto destinado à seção Recompensas, a qual informa as possíveis recompensas com a conclusão do calabouço, além da possibilidade de encontrar monstros únicos. Cria a seção no corpo da página",
+		            "type": "string",
+		            "required": false,
+					"example": "- Ao completar o calabouço, os jogadores terão a possibilidade de receber 1 Miaw em troca de 5 Lã de Papatudo, basta conversar com um Miaw Arisco na sala após a luta com o chefe. - É o único local para encontrar os monstros Papatudo Real e Papatudo Negro."
+		        },
+				"sucessos_secao": {
+		            "label": "Seção Sucessos Relacionados",
+		            "description": "Texto destinado à seção Sucessos Relacionados, a qual lista os sucessos relacionadas com o calabouço. Cria a seção no corpo da página",
+		            "type": "string",
+		            "required": false,
+					"example": "- Pátio do Papatudo Real - Derrotar o Papatudo Real em seu calabouço. - Morte aos babadores! - Grandes coisas têm pequenos começos - Especialista local"
+		        },
+				"notas_secao": {
+		            "label": "Seção Notas",
+		            "description": "Texto destinado à seção Notas, a qual informa detalhes adicionais sobre o calabouço. Cria a seção no corpo da página",
+		            "type": "string",
+		            "required": false,
+					"example": "Pátio do Papatudo Real é um dos 5 calabouços disponíveis para jogadores sem P2P."
+		        },
+				"historico_secao": {
+		            "label": "Seção Histórico",
+		            "description": "Texto destinado à seção Histórico, a qual informa curiosidades de versões prévias do calabouço. Cria a seção no corpo da página",
+		            "type": "string",
+		            "required": false,
+					"example": "Pátio do Papatudo Real já foi conhecido como Calabouço dos Papatudos."
+		        },
+				"pag_ingles": {
+		            "label": "Nome da página da wiki em inglês",
+		            "description": "Adiciona referência à página do calabouço na wiki em inglês",
+		            "type": "string",
+		            "required": false,
+					"example": "Royal Gobball's Court"
+		        }
+		    }
+		}
+	</templatedata>
+
+==Utilização==
+Adicione o seguinte código para o uso da predefinição. Os parâmetros listados como opcionais não necessitam ser incluídos.
+<pre>
+{{Calabouço
+| nivel                 =
+| area                  =
+| subarea               =
+| coords                =
+| chave                 =
+| molho                 =
+| monstros              =
+| recompensas           =
+| detalhes              =
+| npc_entrada           =
+| localizacao_secao     =
+| acesso_secao          =
+| missoes_secao         =
+| salas_secao           =
+| recompensas_secao     =
+| sucessos_secao        =
+| notas_secao           =
+| historico_secao       =
+}}
+</pre>
+</noinclude>
+
+<includeonly>
+{| class="toccolours" style="float: right; clear: right; margin: 0 0 1em 1em; width: 24em; cellpadding: 5"
+! colspan="3" style="background:#A3B8CC"|{{PAGENAME}}
+|-
+! align="left" | Nível recomendado
+| {{{nivel| [[File:Warning Green.png|19px|Nível não definido]]}}}
+|-
+! align="left" | Área
+| {{#if: {{{area|}}} | [[{{{area}}}]] [[Categoria:{{{area}}}]] | [[File:Warning Green.png|19px|Adicione a área deste calabouço]]}}
+|-
+! align="left" | Subárea
+| {{#if: {{{subarea|}}} | [[{{{subarea}}}]] [[Categoria:{{{subarea}}}]] | [[File:Warning Green.png|19px|Adicione a subárea deste calabouço]]}}
+|-
+! align="left" | Coordenadas
+| {{{coords|[[File:Warning Green.png|19px|Coordenadas não definidas]]}}}
+|-
+! align="left" | Chave
+| {{{chave|[[File:Warning Green.png|19px|Adicione a chave necessária para a entrada no calabouço]]}}}
+|-
+! align="left" | [[Molho de Chaves]]
+| {{{molho|[[File:Warning Green.png|19px|Adicione se o molho de chaves pode ser utilizado para a entrada no calabouço]]}}}
+|-
+! align="left" | Monstros exclusivos
+| {{{monstros|[[File:Warning Green.png|19px|Adicione os monstros exclusivos presentes no calabouço]]}}}
+|-
+! align="left" | Recompensas
+| {{{recompensas|Nenhuma}}}
+|-
+! align="left" | Detalhes
+| {{{detalhes|}}}	
+|}
+
+'''{{PAGENAME}}''' é um [[Calabouço]].
+__TOC__
+<br style="clear:both" />
+
+{{#if: {{{localizacao_secao|}}} | 
+== Localização ==
+{{{localizacao_secao}}} |
+== Localização ==
+{{PAGENAME}} está localizado em {{{coords}}} em [[{{{subarea}}}]]. 
+}}
+
+{{#if: {{{acesso_secao|}}} | 
+== Acesso ==
+{{{acesso_secao}}} |
+{{#if: {{{npc_entrada}}} |
+== Acesso ==
+A entrada no calabouço requer que uma {{{chave}}} seja entregue para {{{npc_entrada}}}, a qual será consumida. |
+A entrada no calabouço requer que uma {{{chave}}} seja entregue para um [[NPC]], a qual será consumida.
+}}
+}}
+
+{{#if: {{{missoes_secao|}}} | 
+== [[Missões]] Relacionadas ==
+{{{missoes_secao}}}
+}}
+
+{{#if: {{{salas_secao|}}} | 
+== Salas ==
+{{{salas_secao}}}
+}}
+
+{{#if: {{{recompensas_secao|}}} | 
+== Recompensas ==
+{{{recompensas_secao}}}
+}}
+
+{{#if: {{{sucessos_secao|}}} | 
+== [[Sucessos]] Relacionados ==
+{{{sucessos_secao}}}
+}}
+
+{{#if: {{{notas|}}} | 
+== Notas ==
+{{{notas_secao}}}
+}}
+
+{{#if: {{{historico|}}} | 
+== Histórico ==
+{{{historico_secao}}}
+}}
+
+{{#if: {{{pag_ingles|}}} | 
+[[en:{{{pag_ingles}}}]]
+}}
+
+[[Categoria:Calabouço]]
+</includeonly>
